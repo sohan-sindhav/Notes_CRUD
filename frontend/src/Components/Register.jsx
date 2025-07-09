@@ -35,7 +35,11 @@ const Register = () => {
   };
 
   return (
-    <div className="h-screen flex justify-center items-center bg-gradient-to-r from-[#5f2c82] to-[#49a09d] text-white px-4">
+    <div className="h-screen flex justify-center items-center bg-gradient-to-r from-[#5f2c82] to-[#49a09d] text-white px-4 flex-col gap-2 ">
+      <h1 className="font-semibold">
+        If register doesn't work.. try after 2 mins. render free backend takes 2
+        mins time to startup
+      </h1>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-6 bg-white text-slate-800 p-8 rounded-xl w-full max-w-md shadow-lg"
