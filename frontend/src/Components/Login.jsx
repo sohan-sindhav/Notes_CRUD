@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://notesbackend-7957e289df09.herokuapp.com/api/v1/user/login",
+        "https://notescrud-production.up.railway.app/api/v1/user/login",
         {
           username,
           password,

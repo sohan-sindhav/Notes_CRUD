@@ -14,7 +14,7 @@ const Register = () => {
     try {
       const res = axios
         .post(
-          "https://notesbackend-7957e289df09.herokuapp.com/api/v1/user/create",
+          "https://notescrud-production.up.railway.app/api/v1/user/create",
           {
             username,
             password,

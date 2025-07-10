@@ -42,7 +42,7 @@ const NotesFeed = () => {
   const handleSaveEdit = async (id) => {
     try {
       const res = await axios.put(
-        `https://notesbackend-7957e289df09.herokuapp.com/api/v1/note/update/${id}`,
+        `https://notescrud-production.up.railway.app/api/v1/note/update/${id}`,
         {
           title: editTitle,
           body: editBody,
@@ -63,7 +63,7 @@ const NotesFeed = () => {
   const fetchNotes = async () => {
     try {
       const res = await axios.get(
-        "https://notesbackend-7957e289df09.herokuapp.com/api/v1/note/all",
+        "https://notescrud-production.up.railway.app/api/v1/note/all",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -81,7 +81,7 @@ const NotesFeed = () => {
 
   const handlenotedeletion = async (id) => {
     const res = await axios.delete(
-      `https://notesbackend-7957e289df09.herokuapp.com/api/v1/note/delete/${id}`,
+      `https://notescrud-production.up.railway.app/api/v1/note/delete/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -98,7 +98,7 @@ const NotesFeed = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://notesbackend-7957e289df09.herokuapp.com/api/v1/note/create",
+        "https://notescrud-production.up.railway.app/api/v1/note/create",
         {
           title,
           body,
