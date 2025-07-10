@@ -13,10 +13,13 @@ const Register = () => {
     e.preventDefault();
     try {
       const res = axios
-        .post("https://notes-crud-3kly.onrender.com/api/v1/user/create", {
-          username,
-          password,
-        })
+        .post(
+          "https://notesbackend-7957e289df09.herokuapp.com/api/v1/user/create",
+          {
+            username,
+            password,
+          }
+        )
         .then(() => {
           toast.success(`User ${username} created.`);
           navigate("/auth/login");
