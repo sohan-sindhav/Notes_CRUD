@@ -62,11 +62,14 @@ const NotesFeed = () => {
 
   const fetchNotes = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/v1/note/all", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const res = await axios.get(
+        "https://notes-crud-3kly.onrender.com/api/v1/note/all",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       SetAllNotes(res.data);
     } catch (error) {
       console.error("Error fetching notes:", error);
@@ -78,7 +81,7 @@ const NotesFeed = () => {
 
   const handlenotedeletion = async (id) => {
     const res = await axios.delete(
-      `http://localhost:5000/api/v1/note/delete/${id}`,
+      `https://notes-crud-3kly.onrender.com/api/v1/note/delete/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -95,7 +98,7 @@ const NotesFeed = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/v1/note/create",
+        "https://notes-crud-3kly.onrender.com/api/v1/note/create",
         {
           title,
           body,
