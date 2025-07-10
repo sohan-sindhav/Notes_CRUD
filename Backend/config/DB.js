@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
+const MONGO_URI = process.env.MONGO_URI;
 
 const connectDB = () => {
   try {
-    mongoose
-      .connect(
-        "mongodb+srv://sohann7704:1b02eZHy6FxfN81J@practice1.9gwxe27.mongodb.net/NotePrac01"
-      )
-      .then(() => {
-        console.log("MongoDB connected !!");
-      });
+    mongoose.connect(MONGO_URI).then(() => {
+      console.log("MongoDB connected !!");
+    });
   } catch (error) {
     console.log("Error connecting mongoDB", error);
   }

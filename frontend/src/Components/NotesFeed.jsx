@@ -42,7 +42,7 @@ const NotesFeed = () => {
   const handleSaveEdit = async (id) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/v1/note/update/${id}`,
+        `https://notes-crud-3kly.onrender.com/api/v1/note/update/${id}`,
         {
           title: editTitle,
           body: editBody,

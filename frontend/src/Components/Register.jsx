@@ -13,7 +13,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const res = axios
-        .post("http://localhost:5000/api/v1/user/create", {
+        .post("https://notes-crud-3kly.onrender.com/api/v1/user/create", {
           username,
           password,
         })
