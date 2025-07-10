@@ -48,7 +48,7 @@ router.put("/note/update/:id", verifyToken, async (req, res) => {
 
     const IsUpdated = await Note.findByIdAndUpdate(id, { title, body });
     if (!IsUpdated) {
-      res.status(400), json({ msg: "Note not found" });
+      res.status(400).json({ msg: "Note not found" });
     }
     res.status(200).json({ msg: "Note updated" });
   } catch (error) {

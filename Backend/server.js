@@ -4,11 +4,22 @@ import dotenv from "dotenv";
 import notesRoute from "./routes/notesRoutes.js";
 import AuthRoute from "./routes/authRoutes.js";
 import cors from "cors";
+
 dotenv.config();
 
 const app = express();
+
+const corsOptions = {
+  origin: process.env.FRONTEND_ORIGIN || "https://notes-gilt-pi.vercel.app",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
+// app.options("/*", cors(corsOptions));
+
 app.use(express.json());
-app.use(cors({ origin: process.env.FRONTEND_ORIGIN }));
+
 const PORT = process.env.PORT;
 connectDB();
 
